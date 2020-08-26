@@ -4,7 +4,7 @@ const NodeMediaServer  = require('node-media-server');
 var appConfig=require('./module/config.js');
 
 // md5加密
-// var md5 = require('md5');
+var md5 = require('md5');
 
 const config = {
   rtmp: {
@@ -38,8 +38,10 @@ var HashValue=md5(`/live/${streamName}-${expireDate}-${appConfig.secret}`);
 
 var sign=`${expireDate}-${HashValue}`;
 
-var rtmpUrl=`rtmp://192.168.0.5/live/${streamName}?sign=${sign}`;
+var rtmpUrl=`rtmp://192.168.3.6/live/${streamName}?sign=${sign}`;
+var httpUrl = `http://192.168.3.6:8000/live/${streamName}.flv?sign=${sign}`;
 
-console.log(rtmpUrl);
+console.log('rtmpUrl', rtmpUrl);
+console.log('httpUrl', httpUrl);
 
 
