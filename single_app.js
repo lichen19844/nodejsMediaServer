@@ -9,8 +9,18 @@ const config = {
     ping_timeout: 30
   },
   http: {
-    port: 8000,
+    port: 8008,
     allow_origin: '*'
+  },
+  auth: {
+    api : true,
+    api_user: 'admin',
+    api_pass: 'admin123456',
+  },
+  https: {
+    port: 8443,
+    key:'./ssl/2_app.lichen.pro.key',
+    cert:'./ssl/1_app.lichen.pro_bundle.crt',
   }
 };
 

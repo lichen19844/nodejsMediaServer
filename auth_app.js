@@ -29,7 +29,7 @@ var nms = new NodeMediaServer(config)
 nms.run();
 
 
-//生成推流地址 -演示
+//生成推流地址 -演示，和本例代码无关，仅仅是生成后给OBS和VLC用
 
 var streamName="lichen";
 var expireDate=parseInt((Date.now()+1000000)/1000);
